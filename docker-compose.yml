@@ -1,0 +1,13 @@
+version: '1'
+
+services:
+  next-app:
+    container_name: next14-with-bun
+    build:
+      context: .
+      dockerfile: ./docker/Dockerfile
+    volumes:
+      - .:/app/next-app
+    restart: always
+    ports:
+      - 3000:3000
